@@ -13,7 +13,7 @@ conda config --add channels conda-forge
 conda update --all -y
 ```
 
-#### The required tools are installed with the following command:
+#### Additional tools are installed with Conda using the following commands:
 ```bash
 conda install minimap2 -y
 conda install nanoplot -y

@@ -13,6 +13,16 @@ conda config --add channels conda-forge
 conda update --all -y
 ```
 
+### The required tools are installed with the following command:
+```bash
+conda install minimap2 -y
+conda install nanoplot -y
+conda install nanofilt -y
+conda install diamond -y
+conda create --name porechop_env
+conda install --name porechop_env porechop python=3 gcc
+```
+
 ## UNDER CONSTRUCTION!
 
 ### Specimen 

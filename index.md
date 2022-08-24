@@ -22,6 +22,15 @@ conda install diamond -y
 conda create --name porechop_env
 conda install --name porechop_env porechop python=3 gcc
 ```
+#### Reference host genome data and Diamond NCBI nr database have been downloaded/built in the following hydra directories:
+Reference host genome files found in
+```bash
+/scratch/wrbu/databases/kneaddataDB/
+```
+Diamond nr database
+```bash
+/scratch/wrbu/databases/diamond/
+```
 
 ## Contents of hydra analysis job file:
 ```bash

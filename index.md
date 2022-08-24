@@ -31,7 +31,10 @@ Diamond nr database
 ```bash
 /scratch/wrbu/databases/diamond/
 ```
-
+Megan mapping file
+```bash
+/scratch/wrbu/databases/megan/
+```
 ## Contents of hydra analysis job file:
 ```bash
 

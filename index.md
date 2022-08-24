@@ -23,10 +23,7 @@ conda create --name porechop_env
 conda install --name porechop_env porechop python=3 gcc
 ```
 
-## UNDER CONSTRUCTION!
+## Contents of hydra analysis job file:
+```bash
 
-### Specimen 
-Specimen .  
-
-### COI 
-Raw
+```

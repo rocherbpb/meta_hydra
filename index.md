@@ -4,7 +4,7 @@
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-x86_64.sh
 sh Anaconda3-2022.05-MacOSX-x86_64.sh
 ```
-### Afterwards, restart your terminal and run the following commands to setup Anaconda:
+#### Afterwards, restart your terminal and run the following commands to setup Anaconda:
 ```bash
 conda activate
 conda config --add channels defaults
@@ -13,7 +13,7 @@ conda config --add channels conda-forge
 conda update --all -y
 ```
 
-### The required tools are installed with the following command:
+#### The required tools are installed with the following command:
 ```bash
 conda install minimap2 -y
 conda install nanoplot -y

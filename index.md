@@ -38,6 +38,7 @@ Megan mapping file
 ```
 
 #### Contents of hydra analysis job file:
+```bash 
 # /bin/sh
 # ----------------Parameters---------------------- #
 #$ -S /bin/sh
@@ -93,5 +94,5 @@ daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /s
 done
 #
 echo = `date` job $JOB_NAME done
-
+```
 

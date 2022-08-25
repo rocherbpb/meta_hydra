@@ -37,6 +37,8 @@ Megan mapping file
 /scratch/wrbu/databases/megan/
 ```
 ### Prepare files for Hydra job submission
+#### create a file containing and the list of sample barcodes uses
+Use ```bash nano sample_barcode.list```
 
 #### Contents of hydra analysis job file:
 ```bash 

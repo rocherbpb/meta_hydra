@@ -1,4 +1,4 @@
-## Hydra tool installation
+### Hydra tool installation
 
 ```bash 
 cd ~
@@ -36,6 +36,7 @@ Megan mapping file
 ```bash
 /scratch/wrbu/databases/megan/
 ```
+### Prepare files for Hydra job submission
 
 #### Contents of hydra analysis job file:
 ```bash 

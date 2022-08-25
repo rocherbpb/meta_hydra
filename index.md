@@ -109,4 +109,7 @@ done
 #
 echo = `date` job $JOB_NAME done
 ```
-
+### Submit the job file to Hydra
+```bash 
+qsub diamond.job
+```

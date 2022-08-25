@@ -118,4 +118,4 @@ qsub diamond.job
 qstat
 ```
 ### Megan analysis
-#### Install Megan software on your desktop https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html
+#### Install Megan software on your desktop from https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html

@@ -113,3 +113,7 @@ echo = `date` job $JOB_NAME done
 ```bash 
 qsub diamond.job
 ```
+#### Job status can be checked using
+```bash 
+qstat
+```

@@ -49,7 +49,8 @@ cd /sample_batch_name/
 #### Create a file containing and the list of sample barcodes uses
 Use ```nano sample_barcode.list``` to create the file and copy/paste list of barcodes used. CNTRL X to save and close.
 
-#### Contents of hydra analysis job file:
+#### Create a job file:
+Use ```diamond.job``` to create the file and copy/paste the text below. CNTRL X to save and close.
 ```bash 
 # /bin/sh
 # ----------------Parameters---------------------- #

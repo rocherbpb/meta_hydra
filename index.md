@@ -36,7 +36,62 @@ Megan mapping file
 ```bash
 /scratch/wrbu/databases/megan/
 ```
-## Contents of hydra analysis job file:
-```bash
 
-```
+#### Contents of hydra analysis job file:
+# /bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -pe mthread 16
+#$ -q mThM.q
+#$ -l mres=256G,h_data=16G,h_vmem=16G,himem
+#$ -cwd
+#$ -j y
+#$ -N proc
+#$ -o proc.log
+#
+# ----------------Modules------------------------- #
+module load bioinformatics/samtools
+module load /home/bourkeb/modulefiles/conda
+source activate /home/bourkeb/anaconda3/envs/porechop_env
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+echo + NSLOTS = $NSLOTS
+#
+# define base directory
+BASE_DIR=/scratch/genomics/bourkeb/redinet/mpala/test
+# 
+# make directories
+mkdir data_porechop data_filt data_HostRem diamond
+#
+for filename in $(cat ${BASE_DIR}/sample_barcode.list)
+do
+# cat /scratch/wrbu/redinet_nanopore/Mpala/2022_06_08_gDNA_leech01/2022_06_08_gDNA_leech01/20220608_1229_MC-112986_FAT07274_7b624019/fastq_pass/${filename}/*.fastq.gz > ${BASE_DIR}/data_concat/${filename}.fastq.gz
+#
+# remove adaptors with Porechop
+porechop -i ${BASE_DIR}/data_concat/${filename}.fastq.gz -o ${BASE_DIR}/data_porechop/${filename}_PC.fastq.gz --format fastq.gz --threads $NSLOTS
+#
+# filter based on length < 100bp and QS of >9
+gunzip -c ${BASE_DIR}/data_porechop/${filename}_PC.fastq.gz | NanoFilt -q 9 -l 100 | gzip > ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz
+#
+# remove host genome
+minimap2 -ax map-ont /scratch/wrbu/databases/kneaddataDB/tick_host/tick_host.fna.gz ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz  -I 16G > ${BASE_DIR}/data_HostRem/${filename}.tick_host.sam
+samtools view -f 4 ${BASE_DIR}/data_HostRem/${filename}.tick_host.sam | samtools fastq - | gzip -c - > ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz
+#
+# Plot quality summaries
+NanoPlot -t $NSLOTS --fastq ${BASE_DIR}/data_concat/${filename}.fastq.gz -o ${BASE_DIR}/data_concat/${filename}_plot 
+NanoPlot -t $NSLOTS --fastq ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz -o ${BASE_DIR}/data_filt/${filename}_plot 
+NanoPlot -t $NSLOTS --fastq ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz -o ${BASE_DIR}/data_HostRem/${filename}_plot 
+#
+# Diamond read classification
+diamond blastx --db /scratch/wrbu/databases/diamond/nr --out ${BASE_DIR}/diamond/${filename}_DMD --outfmt 100 -q ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz \
+--threads $NSLOTS -b40 --evalue 1e-9 -F 15 --range-culling --top 10
+#
+# Re-formatting for Megan software
+daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /scratch/wrbu/databases/megan/megan-map-Feb2022.db --threads $NSLOTS
+done
+#
+echo = `date` job $JOB_NAME done
+
+

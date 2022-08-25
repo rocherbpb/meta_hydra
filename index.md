@@ -38,7 +38,7 @@ Megan mapping file
 ```
 ### Prepare files for Hydra job submission
 #### create a file containing and the list of sample barcodes uses
-Use ```bash nano sample_barcode.list```
+Use ```nano sample_barcode.list```
 
 #### Contents of hydra analysis job file:
 ```bash 

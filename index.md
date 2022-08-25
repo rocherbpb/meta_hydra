@@ -37,6 +37,12 @@ Megan mapping file
 /scratch/wrbu/databases/megan/
 ```
 ### Prepare files for Hydra job submission
+#### Move to your working directory
+cd /path_to_working_directory/
+#### mkdir sample batch directory file and move into it
+mkdir /sample_batch_name/
+cd /sample_batch_name/
+
 #### create a file containing and the list of sample barcodes uses
 Use ```nano sample_barcode.list``` to create the file and copy/paste list of barcodes used. CNTRL X to save and close.
 
@@ -63,8 +69,8 @@ source activate /home/bourkeb/anaconda3/envs/porechop_env
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
-# define your working directory
-BASE_DIR=/scratch/genomics/bourkeb/redinet/mpala/test
+# define your sample batch directory
+BASE_DIR=/path_to/sample_batch_name/
 # 
 # make directories
 mkdir data_porechop data_filt data_HostRem diamond

@@ -117,5 +117,7 @@ qsub diamond.job
 ```bash 
 qstat
 ```
+#### On completion, the analysis produces a Diamond .daa file for each barcoded sample 
 ### Megan analysis
 #### Install Megan software on your desktop from https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html
+#### Download the Diamond .daa

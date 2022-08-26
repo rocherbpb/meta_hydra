@@ -83,7 +83,7 @@ BASE_DIR=/path_to/sample_batch_name/
 # define directory of raw data
 raw_DIR=/scratch/wrbu/redinet_nanopore/Mpala/2022_06_08_gDNA_leech01/2022_06_08_gDNA_leech01/20220608_1229_MC-112986_FAT07274_7b624019/fastq_pass
 # make directories
-mkdir data_porechop data_filt data_HostRem diamond
+mkdir data_concat data_porechop data_filt data_HostRem diamond
 #
 for filename in $(cat ${BASE_DIR}/sample_barcode.list)
 do

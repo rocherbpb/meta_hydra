@@ -1,3 +1,6 @@
+install cyberduck
+connect to hydra via terminal ssh
+
 ### Hydra tool installation
 
 ```bash 

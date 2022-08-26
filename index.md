@@ -77,7 +77,7 @@ source activate /home/bourkeb/anaconda3/envs/porechop_env
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
-# define your base directory
+# define your working directory
 BASE_DIR=/path_to/sample_batch_name/
 # 
 # define directory of raw data

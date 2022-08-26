@@ -77,16 +77,18 @@ source activate /home/bourkeb/anaconda3/envs/porechop_env
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
-# define your sample batch directory
+# define your base directory
 BASE_DIR=/path_to/sample_batch_name/
 # 
+# define directory of raw data
+raw_DIR=/scratch/wrbu/redinet_nanopore/Mpala/2022_06_08_gDNA_leech01/2022_06_08_gDNA_leech01/20220608_1229_MC-112986_FAT07274_7b624019/fastq_pass
 # make directories
 mkdir data_porechop data_filt data_HostRem diamond
 #
 for filename in $(cat ${BASE_DIR}/sample_barcode.list)
 do
 # COPY AND PASTE THE PATH OF THE DIRECTORY CONTAING YOUR BARCODE SEQUENCE FASTQ FILES
-cat /scratch/wrbu/redinet_nanopore/Mpala/2022_06_08_gDNA_leech01/2022_06_08_gDNA_leech01/20220608_1229_MC-112986_FAT07274_7b624019/fastq_pass/${filename}/*.fastq.gz > ${BASE_DIR}/data_concat/${filename}.fastq.gz
+cat ${raw_DIR}/${filename}/*.fastq.gz > ${BASE_DIR}/data_concat/${filename}.fastq.gz
 #
 # remove adaptors with Porechop
 porechop -i ${BASE_DIR}/data_concat/${filename}.fastq.gz -o ${BASE_DIR}/data_porechop/${filename}_PC.fastq.gz --format fastq.gz --threads $NSLOTS

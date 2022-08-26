@@ -23,7 +23,7 @@ conda install diamond -y
 conda create --name porechop_env
 conda install --name porechop_env porechop python=3 gcc
 ```
-#### Install Megan software on your desktop from https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html
+Install Megan software on your desktop from https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html
 #### Reference host genome data and Diamond NCBI nr database have already been downloaded/built in the following hydra directories:
 Reference host genome files found in
 ```bash

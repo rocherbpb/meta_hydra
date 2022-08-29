@@ -77,10 +77,10 @@ source activate /home/bourkeb/anaconda3/envs/porechop_env
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
-# define your working directory
+# Point to the output folder
 BASE_DIR=/scratch/genomics/polsomboons/GEIS/2022_08_03_gDNA_Chadticks_Guammosq
 # 
-# define directory of raw data
+# point to the fastq_pass (raw barcode data) folder
 raw_DIR=/scratch/wrbu/GEIS/ticks/2022_08_03_gDNA_Chadticks_Guammosq/2022_08_03_gDNA_Chadticks_Guammosq/20220803_1126_X3_FAT27787_be39f395/fastq_pass
 # make directories
 mkdir data_concat data_porechop data_filt data_HostRem diamond

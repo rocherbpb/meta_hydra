@@ -78,16 +78,15 @@ echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
 # define your working directory
-BASE_DIR=/path_to/sample_batch_name/
+BASE_DIR=/scratch/genomics/polsomboons/GEIS/2022_08_03_gDNA_Chadticks_Guammosq
 # 
 # define directory of raw data
-raw_DIR=/scratch/wrbu/redinet_nanopore/Mpala/2022_06_08_gDNA_leech01/2022_06_08_gDNA_leech01/20220608_1229_MC-112986_FAT07274_7b624019/fastq_pass
+raw_DIR=/scratch/wrbu/GEIS/ticks/2022_08_03_gDNA_Chadticks_Guammosq/2022_08_03_gDNA_Chadticks_Guammosq/20220803_1126_X3_FAT27787_be39f395/fastq_pass
 # make directories
 mkdir data_concat data_porechop data_filt data_HostRem diamond
 #
 for filename in $(cat ${BASE_DIR}/sample_barcode.list)
 do
-# COPY AND PASTE THE PATH OF THE DIRECTORY CONTAING YOUR BARCODE SEQUENCE FASTQ FILES
 cat ${raw_DIR}/${filename}/*.fastq.gz > ${BASE_DIR}/data_concat/${filename}.fastq.gz
 #
 # remove adaptors with Porechop
@@ -97,8 +96,8 @@ porechop -i ${BASE_DIR}/data_concat/${filename}.fastq.gz -o ${BASE_DIR}/data_por
 gunzip -c ${BASE_DIR}/data_porechop/${filename}_PC.fastq.gz | NanoFilt -q 9 -l 100 | gzip > ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz
 #
 # remove host genome
-minimap2 -ax map-ont /scratch/wrbu/databases/kneaddataDB/tick_host/tick_host.fna.gz ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz  -I 16G > ${BASE_DIR}/data_HostRem/${filename}.tick_host.sam
-samtools view -f 4 ${BASE_DIR}/data_HostRem/${filename}.tick_host.sam | samtools fastq - | gzip -c - > ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz
+minimap2 -ax map-ont /scratch/wrbu/databases/kneaddataDB/mosq_tick_leech_host/mosq_tick_leech_host.fna.gz ${BASE_DIR}/data_filt/${filename}_filt.fastq.gz  -I 16G > ${BASE_DIR}/data_HostRem/${filename}.host.sam
+samtools view -f 4 ${BASE_DIR}/data_HostRem/${filename}.host.sam | samtools fastq - | gzip -c - > ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz
 #
 # Plot quality summaries
 NanoPlot -t $NSLOTS --fastq ${BASE_DIR}/data_concat/${filename}.fastq.gz -o ${BASE_DIR}/data_concat/${filename}_plot 

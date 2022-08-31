@@ -54,7 +54,7 @@ cd /sample_batch_name/
 Use ```nano sample_barcode.list``` to create the file and copy/paste list of barcodes used. CNTRL X to save and close.
 
 #### Create a job file:
-Use ```diamond.job``` to create the file and copy/paste the text below. Make the appropriate changes described. CNTRL X to save and close.
+Use ```nano diamond.job``` to create the file and copy/paste the text below. Make the appropriate changes described. CNTRL X to save and close.
 ```bash 
 # /bin/sh
 # ----------------Parameters---------------------- #

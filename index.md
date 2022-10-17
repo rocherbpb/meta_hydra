@@ -174,6 +174,7 @@ blastn \
   -num_threads $NSLOTS \
   -evalue 1e-9
 
+blast2rma --in ${INPUT_DIR}/${FILENAME}_blast --format BlastText --out ${FILENAME}_blast.rma --minSupport 1 --minPercentIdentity 90 --maxExpected 1.0E-9 --lcaAlgorithm longReads --lcaCoveragePercent 51
 #
 echo = `date` job $JOB_NAME done
 ```

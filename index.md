@@ -128,4 +128,4 @@ Install Megan software on your desktop from https://software-ab.informatik.uni-t
 
 Download the Diamond .daa files to your desktop using Cyberduck or Filezilla 
 
-Pathogens in the dataset are identified from the CZ-ID pathogen list https://czid.org/pathogen_list
+Pathogens in the dataset are identified from the CZ-ID pathogen list (https://czid.org/pathogen_list) and the pathogens of military importance list (here).

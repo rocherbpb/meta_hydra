@@ -41,7 +41,7 @@ BASE_DIR=/scratch/genomics/bourkeb/GEIS/ticks/new_analysis/2022_10_03_cDNA_Bulga
 # define directory of raw data
 raw_DIR=/scratch/wrbu/GEIS/ticks/2022_10_03_cDNA_BulgariaBarcode73_96/2022_10_03_cDNA_BulgariaBarcode73_96/20221004_1021_X5_FAT50844_523e9c3b/fastq_pass
 # make directories
-mkdir data_concat data_porechop data_filt data_HostRem diamond
+mkdir data_concat data_porechop data_filt data_HostRem diamond blast
 #
 for filename in $(cat ${BASE_DIR}/sample_barcode.list)
 do
@@ -88,6 +88,7 @@ Download the Diamond .daa files to your desktop using Cyberduck or Filezilla
 
 Pathogens in the dataset are identified from the CZ-ID pathogen list (https://czid.org/pathogen_list) and the pathogens of military importance list (here).
 
+Select each pathogen node, and save reads (File->Extract Reads...) as a fasta file. Move these fata files to the Blast directory found in the working directory. 
 
 ### Blast confirmation of Diamond classification
 Create blast job files:

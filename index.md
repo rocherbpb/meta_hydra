@@ -132,7 +132,7 @@ Pathogens in the dataset are identified from the CZ-ID pathogen list (https://cz
 
 
 ### Blast confirmation of Diamond classification
-Create a blast job files:
+Create blast job files:
 
 Use ```nano blast-megan.job``` to create the file and copy/paste the text below. Make the appropriate changes described. CNTRL X to save and close.
 

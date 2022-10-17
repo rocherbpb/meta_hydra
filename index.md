@@ -178,3 +178,5 @@ blastn \
 echo = `date` job $JOB_NAME done
 ```
 Accept changes and press CNTRL X to save and close.
+
+Create a blast submission file - ```nano submit_blast_jobs.sou``` and copy/paste the text below. Then CNTRL X to save and close.

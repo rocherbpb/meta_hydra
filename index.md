@@ -187,3 +187,11 @@ for x in $(cat blast_file.list); do
   qsub -o blast_logs/blast-${x}.log blast-megan.job ${x}
 done
 ```
+### Submit the job file to Hydra
+```bash 
+source submit_blast_jobs.sou
+```
+#### Job status can be checked using
+```bash 
+qstat
+```

@@ -127,3 +127,5 @@ qstat
 Install Megan software on your desktop from https://software-ab.informatik.uni-tuebingen.de/download/megan6/welcome.html
 
 Download the Diamond .daa files to your desktop using Cyberduck or Filezilla 
+
+Pathogens in the dataset are identified from the CZ-ID pathogen list https://czid.org/pathogen_list

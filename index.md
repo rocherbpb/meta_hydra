@@ -72,7 +72,7 @@ done
 #
 echo = `date` job $JOB_NAME done
 ```
-### Submit the job file to Hydra
+### Submit Nanopore data to Hydra/Diamond
 ```bash 
 qsub diamond.job
 ```

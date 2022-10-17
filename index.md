@@ -108,6 +108,7 @@ Use ```nano blast-megan.job``` to create the file and copy/paste the text below.
 #
 # ----------------Modules------------------------- #
 module load bioinformatics/blast
+module load /home/bourkeb/modulefiles/conda
 #
 # ----------------Your Commands------------------- #
 #

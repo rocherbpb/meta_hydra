@@ -177,3 +177,4 @@ blastn \
 #
 echo = `date` job $JOB_NAME done
 ```
+Accept changes and press CNTRL X to save and close.

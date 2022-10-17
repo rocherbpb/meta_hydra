@@ -180,3 +180,10 @@ echo = `date` job $JOB_NAME done
 Accept changes and press CNTRL X to save and close.
 
 Create a blast submission file - ```nano submit_blast_jobs.sou``` and copy/paste the text below. Then CNTRL X to save and close.
+```bash 
+mkdir -p blast_logs
+ls *.fasta -1|sed -e 's/\.fasta//' > blast_file.list
+for x in $(cat blast_file.list); do 
+  qsub -o blast_logs/blast-${x}.log blast-megan.job ${x}
+done
+```

@@ -132,3 +132,45 @@ Pathogens in the dataset are identified from the CZ-ID pathogen list (https://cz
 
 
 ### Blast confirmation of Diamond classification
+
+```bash 
+# /bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -pe mthread 1
+#$ -q mThM.q
+#$ -l mres=300G,h_data=300G,h_vmem=300G,himem
+#$ -cwd
+#$ -j y
+#$ -N blast-megan
+#$ -o blast-megan.log
+#
+# ----------------Modules------------------------- #
+module load bioinformatics/blast
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+echo + NSLOTS = $NSLOTS
+
+#
+if [ -z $1 ]; then
+  echo "Please give the input filename as an argument to qsub"
+  exit 1
+fi
+
+FILENAME=${1}
+
+INPUT_DIR=/scratch/genomics/bourkeb/GEIS/ticks/new_analysis/2022_10_03_cDNA_BulgariaBarcode73_96/blast
+
+blastn \
+  -task blastn \
+  -db nt \
+  -query ${INPUT_DIR}/${FILENAME}.fasta \
+  -out ${INPUT_DIR}/${FILENAME}_blast \
+  -num_threads $NSLOTS \
+  -evalue 1e-9
+
+#
+echo = `date` job $JOB_NAME done
+```

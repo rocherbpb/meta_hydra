@@ -1,4 +1,4 @@
-### Hydra tool installation
+### Conda tool installation on Hydra
 
 ```bash 
 cd ~

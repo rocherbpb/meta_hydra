@@ -64,8 +64,8 @@ Use ```nano diamond.job``` to create the file and copy/paste the text below. Mak
 #$ -l mres=256G,h_data=16G,h_vmem=16G,himem
 #$ -cwd
 #$ -j y
-#$ -N proc
-#$ -o proc.log
+#$ -N diamond
+#$ -o diamond.log
 #
 # ----------------Modules------------------------- #
 module load bioinformatics/samtools
@@ -77,11 +77,11 @@ source activate /home/bourkeb/anaconda3/envs/porechop_env
 echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
-# Point to the output folder
-BASE_DIR=/scratch/genomics/polsomboons/GEIS/2022_08_03_gDNA_Chadticks_Guammosq
+# define your working directory
+BASE_DIR=/scratch/genomics/bourkeb/GEIS/ticks/new_analysis/2022_10_03_cDNA_BulgariaBarcode73_96
 # 
-# point to the fastq_pass (raw barcode data) folder
-raw_DIR=/scratch/wrbu/GEIS/ticks/2022_08_03_gDNA_Chadticks_Guammosq/2022_08_03_gDNA_Chadticks_Guammosq/20220803_1126_X3_FAT27787_be39f395/fastq_pass
+# define directory of raw data
+raw_DIR=/scratch/wrbu/GEIS/ticks/2022_10_03_cDNA_BulgariaBarcode73_96/2022_10_03_cDNA_BulgariaBarcode73_96/20221004_1021_X5_FAT50844_523e9c3b/fastq_pass
 # make directories
 mkdir data_concat data_porechop data_filt data_HostRem diamond
 #
@@ -113,7 +113,7 @@ daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /s
 done
 #
 echo = `date` job $JOB_NAME done
-```
+
 ### Submit the job file to Hydra
 ```bash 
 qsub diamond.job

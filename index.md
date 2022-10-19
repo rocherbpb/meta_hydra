@@ -156,3 +156,5 @@ source submit_blast_jobs.sou
 ```bash 
 qstat
 ```
+#### View blast alignments in Megan
+Download the rma files to your computers and open them in the Megan software. 

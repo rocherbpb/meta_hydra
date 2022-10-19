@@ -157,4 +157,4 @@ source submit_blast_jobs.sou
 qstat
 ```
 #### View blast alignments in Megan
-Download the rma files to your computers and open them in the Megan software. 
+Download the rma files to your computer and open them in the Megan software. 

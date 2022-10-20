@@ -67,7 +67,7 @@ diamond blastx --db /scratch/wrbu/databases/diamond/nr --out ${BASE_DIR}/diamond
 --threads $NSLOTS -b40 --evalue 1e-9 -F 15 --range-culling --top 10
 #
 # Re-formatting for Megan software
-daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /scratch/wrbu/databases/megan/megan-map-Feb2022.db --threads $NSLOTS --minSupport 1 --minPercentIdentity 90 --maxExpected 1.0E-9 --lcaAlgorithm longReads --lcaCoveragePercent 51
+daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /scratch/wrbu/databases/megan/megan-map-Feb2022.db --threads $NSLOTS --minSupport 1 --minPercentIdentity 90 --maxExpected 1.0E-9 --lcaAlgorithm longReads --lcaCoveragePercent 51 --longReads 
 done
 #
 echo = `date` job $JOB_NAME done

@@ -1,3 +1,6 @@
+
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)
+
 ### Prepare files for Hydra job submission
 #### Move to your working directory
 ```bash

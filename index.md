@@ -92,7 +92,7 @@ Download the Diamond .daa files to your desktop using Cyberduck or Filezilla
 
 Pathogens in the dataset are identified from the CZ-ID pathogen list (https://czid.org/pathogen_list) and all associated TaxonIDs are listed [here](https://github.com/rocherbpb/meta_hydra/blob/main/full_CZID_pathogen_list.txt).
 
-Select each pathogen node, and save reads (File->Extract Reads...) as a fasta file. Move these fata files to the Blast directory found in the working directory. 
+Select each pathogen node, and save reads (File->Extract Reads...) as a fasta file. Move these fasta files to the Blast directory found in the working directory. 
 
 ### Blast confirmation of Diamond classification
 Create blast job files:

@@ -92,7 +92,7 @@ Download the Diamond .daa files to your desktop using Cyberduck or Filezilla.
 
 Open the downloaded .daa file in Megan (File-> Open...).
 
-Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Expected = 1E-9, Min Percent Identity=90 (70 for viral exploration), Min Support Percent=0, Min Support=1, LCA Algorithm=longReads, Parse as Long Reads=ON (see Figure 1). Press “Apply”.
+Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Expected = 1E-9, Min Percent Identity=90 (70 for viral exploration), Min Support Percent=0, Min Support=1, LCA Algorithm=longReads, Parse as Long Reads=ON (see figure below). Press “Apply”.
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA_params.png)
 

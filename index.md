@@ -91,7 +91,7 @@ Install Megan software on your desktop from https://software-ab.informatik.uni-t
 Download the Diamond .daa files to your desktop using Cyberduck or Filezilla 
 Open the downloaded .daa file in Megan (File-> Open...).
 Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Expected = 1E-9, Min Percent Identity=90 (70 for viral exploration), Min Support Percent=0, Min Support=1, LCA Algorithm=longReads, Parse as Long Reads=ON (see Figure 1). Press “Apply”.
-To show only taxon identified in the Pathogens list, all taxa must first be disabled using the top level taxonomy value of 1 via Edit->Preferences->Taxon Disabling>Disable. Taxa from the CZ-ID Pathogen [list] (https://github.com/rocherbpb/meta_hydra/blob/main/full_CZID_pathogen_list.txt) are then entered (copy/paste) as a comma separated list via Edit->Preferences->Taxon Disabling>Enable (attached pathogen list includes CZ-ID list and all children taxa). The resulting taxonomic tree lists all reads assigned to Pathogen nodes.
+To show only taxon identified in the Pathogens list, all taxa must first be disabled using the top level taxonomy value of 1 via Edit->Preferences->Taxon Disabling>Disable. Taxa from the CZ-ID Pathogen [list](https://github.com/rocherbpb/meta_hydra/blob/main/full_CZID_pathogen_list.txt) are then entered (copy/paste) as a comma separated list via Edit->Preferences->Taxon Disabling>Enable (attached pathogen list includes CZ-ID list and all children taxa). The resulting taxonomic tree lists all reads assigned to Pathogen nodes.
 6.	To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads.. and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
 
 

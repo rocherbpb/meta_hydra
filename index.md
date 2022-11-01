@@ -167,4 +167,11 @@ source submit_blast_jobs.sou
 qstat
 ```
 #### View blast alignments in Megan
-Download the rma files to your computer and open them in the Megan software. 
+Download the .rma files to your computer and open them in the Megan software. 
+
+Open downloaded .rma file in Megan (File-> Open...). 
+
+LCA parameters are again set as in Diamond analysis (Figure 1). Press “Apply”.
+
+Classifications that confirm the initial Diamond pathogen classification are referred to as Blast confirmed pathogens. 
+

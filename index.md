@@ -27,9 +27,10 @@ Use ```nano diamond.job``` to create the file and copy/paste the text below. Mak
 # /bin/sh
 # ----------------Parameters---------------------- #
 #$ -S /bin/sh
-#$ -pe mthread 16
+#$ -pe mthread 8
 #$ -q mThM.q
-#$ -l mres=256G,h_data=16G,h_vmem=16G,himem
+#$ -l mres=512G,h_data=64G,h_vmem=64G,himem
+#$ -l cpu_arch='!zen'
 #$ -cwd
 #$ -j y
 #$ -N diamond
@@ -46,12 +47,12 @@ echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
 echo + NSLOTS = $NSLOTS
 #
 # define your working directory
-BASE_DIR=/scratch/genomics/bourkeb/GEIS/ticks/new_analysis/2022_10_03_cDNA_BulgariaBarcode73_96
+BASE_DIR=/home/bourkeb/meta_hydra_training/20220623_gDNA_bigleech_newtick
 # 
-# define location of fastq_pass (raw) data directory 
-raw_DIR=/scratch/wrbu/GEIS/ticks/2022_10_03_cDNA_BulgariaBarcode73_96/2022_10_03_cDNA_BulgariaBarcode73_96/20221004_1021_X5_FAT50844_523e9c3b/fastq_pass
+# define directory of raw data
+raw_DIR=/scratch/wrbu/redinet_nanopore/Mpala/2022_06_23_gDNA_bigleechandnewtick1
 # make directories
-mkdir data_concat data_porechop data_filt data_HostRem diamond blast
+mkdir data_concat data_porechop data_filt data_HostRem diamond
 #
 for filename in $(cat ${BASE_DIR}/sample_barcode.list)
 do
@@ -74,10 +75,10 @@ NanoPlot -t $NSLOTS --fastq ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz 
 #
 # Diamond read classification
 diamond blastx --db /scratch/wrbu/databases/diamond/nr --out ${BASE_DIR}/diamond/${filename}_DMD --outfmt 100 -q ${BASE_DIR}/data_HostRem/${filename}_clean.fastq.gz \
---threads $NSLOTS -b40 --evalue 1e-9 -F 15 --range-culling --top 10
+--threads $NSLOTS -b40 --evalue 1e-9 --long-reads
 #
 # Re-formatting for Megan software
-daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /scratch/wrbu/databases/megan/megan-map-Feb2022.db --threads $NSLOTS --minSupport 1 --minPercentIdentity 90 --maxExpected 1.0E-9 --lcaAlgorithm longReads --lcaCoveragePercent 51 --longReads 
+daa-meganizer --in ${BASE_DIR}/diamond/${filename}_DMD.daa --classify --mapDB /scratch/wrbu/databases/megan/megan-map-Feb2022.db --threads $NSLOTS --minSupport 1 --minPercentIdentity 70 --maxExpected 1.0E-9 --lcaAlgorithm longReads --lcaCoveragePercent 51 --longReads 
 done
 #
 echo = `date` job $JOB_NAME done

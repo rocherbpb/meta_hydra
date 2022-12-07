@@ -5,6 +5,10 @@
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA.png)
 
 ## Prepare files for Hydra job submission
+#### Log into Hydra
+```bash
+ssh username@hydra-login01.si.edu
+```
 #### Move to your working directory
 ```bash
 cd /path_to_working_directory/

@@ -105,7 +105,7 @@ Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Ex
 
 #### LCA classification in Megan
 
-![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/Megan_LCA.png)
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/megan_LCA.png)
 
 To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads.. and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
 

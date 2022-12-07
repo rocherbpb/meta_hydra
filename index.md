@@ -1,4 +1,4 @@
-### Taxonomic classification workflow
+## Taxonomic classification workflow
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)
 
@@ -6,7 +6,7 @@
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA.png)
 
-### Prepare files for Hydra job submission
+## Prepare files for Hydra job submission
 #### Move to your working directory
 ```bash
 cd /path_to_working_directory/

@@ -185,7 +185,5 @@ LCA parameters are again set as in Diamond analysis (Figure 1). Press “Apply�
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/megan_blast_LCA.png)
 
-To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads, and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
-
-Classifications that confirm the initial Diamond pathogen classification are referred to as Blast confirmed pathogens. 
+Read classifications that confirm the initial Diamond pathogen classification are referred to as Blast confirmed pathogen reads. 
 

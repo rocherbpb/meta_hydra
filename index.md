@@ -2,6 +2,10 @@
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)
 
+#### Principle of LCA
+
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA.png)
+
 ### Prepare files for Hydra job submission
 #### Move to your working directory
 ```bash

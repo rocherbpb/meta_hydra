@@ -18,7 +18,7 @@ cd /path_to_working_directory/
 mkdir /sample_batch_name/
 cd /sample_batch_name/
 ```
-#### Create a file containing and the list of sample barcodes uses
+#### Create a file containing the list of sample barcodes uses
 Use ```nano sample_barcode.list``` to create the file and copy/paste list of barcodes used. CNTRL X to save and close.
 
 #### Create a job file:

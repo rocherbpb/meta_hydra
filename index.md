@@ -103,7 +103,7 @@ Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Ex
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA_params.png)
 
-#### LCA classification in Megan
+#### LCA classification of Diamond alignments
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/megan_LCA.png)
 
@@ -180,6 +180,12 @@ qstat
 Download the .rma files to your computer and open them in the Megan software (File-> Open...).  
 
 LCA parameters are again set as in Diamond analysis (Figure 1). Press “Apply”.
+
+#### LCA classification of Blast alignments
+
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/megan_blast_LCA.png)
+
+To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads, and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
 
 Classifications that confirm the initial Diamond pathogen classification are referred to as Blast confirmed pathogens. 
 

@@ -48,7 +48,7 @@ echo + NSLOTS = $NSLOTS
 # define your working directory
 BASE_DIR=/scratch/genomics/bourkeb/GEIS/ticks/new_analysis/2022_10_03_cDNA_BulgariaBarcode73_96
 # 
-# define directory of raw data
+# define location of fastq_pass (raw) data directory 
 raw_DIR=/scratch/wrbu/GEIS/ticks/2022_10_03_cDNA_BulgariaBarcode73_96/2022_10_03_cDNA_BulgariaBarcode73_96/20221004_1021_X5_FAT50844_523e9c3b/fastq_pass
 # make directories
 mkdir data_concat data_porechop data_filt data_HostRem diamond blast

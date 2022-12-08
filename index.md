@@ -1,3 +1,4 @@
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/metagenomics.JPG)
 ## Taxonomic classification workflow
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)

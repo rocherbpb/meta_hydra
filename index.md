@@ -1,3 +1,4 @@
+## Whole Genome Sequencing Metagenomics
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/metagenomics1.JPG)
 ## Taxonomic classification workflow
 

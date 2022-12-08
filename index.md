@@ -99,10 +99,10 @@ Default LCA parameters (Options->Change LCA Parameters..) are as follows: Max Ex
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA_params.png)
 
 #### LCA classification of Diamond alignments
-
+Select Rank at the level of Species. 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/megan_LCA.png)
 
-Select Rank at the level of Species. To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads, and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
+To extract pathogen reads from each pathogen, select each pathogen node and then select File->Extract Reads, and “Include Summarized Reads” to save a sample pathogen file to a sample blast directory. 
 
 
 #### Blast confirmation of Diamond classification

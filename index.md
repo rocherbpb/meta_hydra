@@ -1,9 +1,9 @@
 ## Whole Genome Sequencing Metagenomics
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/metagenomics1.JPG)
+![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA1.png)
 ## Taxonomic classification workflow
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)
-![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA.png)
 ## Prepare files for Hydra job submission
 #### Log into Hydra
 ```bash

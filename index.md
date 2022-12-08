@@ -3,7 +3,6 @@
 ## Taxonomic classification workflow
 
 ![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/classification_workflow.png)
-![Alt text](https://github.com/rocherbpb/meta_hydra/blob/main/LCA1.png)
 ## Prepare files for Hydra job submission
 #### Log into Hydra
 ```bash

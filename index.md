@@ -25,7 +25,6 @@ Use ```nano diamond.job``` to create the file and copy/paste the text below. Mak
 #$ -pe mthread 8
 #$ -q mThM.q
 #$ -l mres=512G,h_data=64G,h_vmem=64G,himem
-#$ -l cpu_arch='!zen'
 #$ -cwd
 #$ -j y
 #$ -N diamond
